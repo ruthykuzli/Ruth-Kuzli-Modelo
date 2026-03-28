@@ -229,6 +229,16 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     transform: rotate(4deg);
     width: 200px;
+    z-index: 5;
+}
+
+@media (max-width: 768px) {
+    .polaroid-wrapper {
+        width: 130px;
+        top: -15px;
+        right: -10px;
+        padding: 5px 5px 30px 5px;
+    }
 }
 
 .about-img-polaroid {
@@ -520,6 +530,25 @@ body {
     border-bottom: none;
 }
 
+@media (max-width: 768px) {
+    .folder-tabs {
+        justify-content: space-between;
+        gap: 2px;
+    }
+    .folder-tab {
+        flex: 1;
+        padding: 15px 5px;
+        font-size: 0.8rem;
+        line-height: 1.1;
+        white-space: normal;
+        text-align: center;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 /* Back to tabs button inside galleries */
 .back-to-tabs-btn {
     display: inline-block;
@@ -712,15 +741,18 @@ body {
 
 @media (max-width: 900px) {
     .pasada-split { flex-direction: column !important; }
+    .pasada-side-video .gallery-vid { max-width: 320px; margin: 0 auto; display: block; }
     .collage-item { 
         position: relative !important; 
         transform: none !important; 
         width: 100% !important; 
-        max-width: 350px !important; 
-        margin-bottom: 20px !important;
+        max-width: 320px !important; 
+        margin: 0 auto 20px auto !important;
         left: 0 !important;
         top: 0 !important;
+        display: block;
     }
+    .collage-item img { max-width: 320px; margin: 0 auto; }
     .pasada-side-photos { flex-direction: column; min-height: auto; padding-top: 40px;}
 }
 
@@ -912,11 +944,12 @@ footer {
 .eco-span-2x2 { grid-row: span 2; grid-column: span 2; }
 
 @media (max-width: 900px) {
-    .ecommerce-gallery { grid-template-columns: repeat(2, 1fr); }
+    .ecommerce-gallery { grid-template-columns: repeat(2, 1fr); padding: 20px 10px; gap: 10px; }
 }
 @media (max-width: 500px) {
-    .ecommerce-gallery { grid-template-columns: 1fr; }
+    .ecommerce-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; grid-auto-rows: 140px;}
     .eco-span-col-2, .eco-span-2x2 { grid-column: span 1; }
+    .eco-span-row-2 { grid-row: span 1; }
 }
 
 .footer {
