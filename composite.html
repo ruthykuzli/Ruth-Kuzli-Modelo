@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composite - Ruth Kuzli</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        body {
+            background-color: var(--bg-color, #f4efe8);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .composite-section {
+            flex: 1;
+            padding: 100px 5%;
+            text-align: center;
+        }
+        .composite-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            color: var(--primary-color, #7a0000);
+            margin-bottom: 10px;
+        }
+        .composite-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #4a4a4a;
+            margin-bottom: 60px;
+        }
+        .composite-image-container {
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        .composite-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .back-btn-container {
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+        .back-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary-color, #7a0000);
+            border: 2px solid var(--primary-color, #7a0000);
+            padding: 15px 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        .back-btn:hover {
+            background-color: var(--primary-color, #7a0000);
+            color: #ffffff;
+        }
+        /* Mobile adjustment */
+        @media (max-width: 768px) {
+            .composite-section { padding-top: 50px; }
+            .composite-title { font-size: 3rem; }
+            .composite-image-container { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="composite-section">
+        <h1 class="composite-title">Composite</h1>
+        <p class="composite-subtitle">Ruth Kuzli</p>
+        
+        <div class="composite-image-container">
+            <img src="assets/Composite - Ruth Kuzli - modelo.png" alt="Composite Ruth Kuzli">
+        </div>
+
+        <div class="back-btn-container">
+            <a href="index.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left" style="margin-right: 10px;"></i>
+                VOLVER AL INICIO
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2 class="footer-logo">Ruth Kuzli</h2>
+            <div class="footer-socials">
+                <a href="https://instagram.com/ruthykuzli.ok" class="social-link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://tiktok.com/@ruthykuzli.ok" class="social-link" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="mailto:ruthkuzli.mod@gmail.com" class="social-link"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 2px; margin-top: 20px; color: #ede7e5;">&copy; 2026 RUTH KUZLI</p>
+        </div>
+    </footer>
+
+</body>
+</html>
