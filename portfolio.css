@@ -363,6 +363,23 @@ body {
     left: 20%;
 }
 
+@media (max-width: 900px) {
+    .stats-editorial-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .stats-left, .stats-right {
+        text-align: center;
+    }
+    .stats-col {
+        gap: 40px;
+    }
+    .stats-center-img {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}
+
 /* Red Polaroids Section */
 .red-polaroids-section {
     background-color: var(--primary-color);
@@ -501,6 +518,31 @@ body {
     letter-spacing: 2px;
     white-space: nowrap;
     border-bottom: none;
+}
+
+/* Back to tabs button inside galleries */
+.back-to-tabs-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--text-color);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin: 40px auto 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.back-to-tabs-btn:hover {
+    background-color: #000;
+}
+.back-tabs-container {
+    text-align: center;
+    width: 100%;
 }
 
 /* Solapas Impares (1 y 3) - Rojas */
@@ -670,7 +712,15 @@ body {
 
 @media (max-width: 900px) {
     .pasada-split { flex-direction: column !important; }
-    .collage-item { position: relative; transform: none !important; width: 100%; max-width: 350px; margin-bottom: 20px;}
+    .collage-item { 
+        position: relative !important; 
+        transform: none !important; 
+        width: 100% !important; 
+        max-width: 350px !important; 
+        margin-bottom: 20px !important;
+        left: 0 !important;
+        top: 0 !important;
+    }
     .pasada-side-photos { flex-direction: column; min-height: auto; padding-top: 40px;}
 }
 
