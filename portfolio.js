@@ -9,7 +9,7 @@ function openTab(evt, tabName) {
     }
 
     // Remove active class from all tabs
-    tablinks = document.getElementsByClassName("folder-tab");
+    tablinks = document.getElementsByClassName("editorial-tab");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove("active");
     }
