@@ -1020,6 +1020,7 @@ footer {
 
 .runway-item video {
     box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+    cursor: pointer;
 }
 
 .span-row-2 { grid-row: span 2; }
@@ -1090,6 +1091,7 @@ footer {
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
+    cursor: pointer;
 }
 
 .reels-item:hover video {

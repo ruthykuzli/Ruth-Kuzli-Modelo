@@ -26,3 +26,29 @@ function openTab(evt, tabName) {
         folderSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
+
+// Lógica interactiva para activar sonido en los videos sin controles nativos
+document.addEventListener("DOMContentLoaded", function() {
+    const videos = document.querySelectorAll('video');
+    
+    videos.forEach(video => {
+        // Asegurar que no tengan controles nativos para que el click funcione en toda la superficie
+        video.removeAttribute('controls');
+        
+        video.addEventListener('click', function() {
+            if (video.muted) {
+                // Silenciar todos los demás videos para que no se mezclen los audios
+                videos.forEach(v => {
+                    v.muted = true;
+                });
+                
+                // Des-silenciar el video clickeado y reiniciar para escuchar desde el principio
+                video.muted = false;
+                video.currentTime = 0;
+            } else {
+                // Si ya tenía sonido, lo volvemos a silenciar
+                video.muted = true;
+            }
+        });
+    });
+});
