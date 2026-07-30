@@ -276,6 +276,16 @@ body {
     animation: marquee 20s linear infinite;
 }
 
+@media (max-width: 768px) {
+    .marquee-container {
+        padding: 20px 0;
+    }
+    .marquee-text {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+}
+
 @keyframes marquee {
     0%   { transform: translate(0, 0); }
     100% { transform: translate(-100%, 0); }
@@ -444,8 +454,8 @@ body {
 }
 
 @media (max-width: 900px) {
-    .polaroids-grid { gap: 20px; }
-    .polaroid-card { width: 45%; margin: 0 !important; transform: rotate(0) !important; }
+    .polaroids-grid { gap: 15px; }
+    .polaroid-card { width: 38%; padding: 10px 10px 45px 10px; margin: 0 !important; transform: rotate(0) !important; }
 }
 
 @media (max-width: 500px) {
@@ -968,14 +978,16 @@ footer {
 }
 
 .runway-sidebar-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    line-height: 1.1;
-    margin-bottom: 30px;
-    font-weight: 400;
-    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 25px;
     border-bottom: 1px solid rgba(139, 0, 0, 0.2);
-    padding-bottom: 15px;
+    padding-bottom: 12px;
+    color: var(--primary-color);
 }
 
 .runway-brands {
