@@ -234,10 +234,10 @@ body {
 
 @media (max-width: 768px) {
     .polaroid-wrapper {
-        width: 130px;
+        width: 90px;
         top: -15px;
-        right: -10px;
-        padding: 5px 5px 30px 5px;
+        right: -5px;
+        padding: 4px 4px 20px 4px;
     }
 }
 
@@ -1157,7 +1157,7 @@ footer {
     .about-text-columns { grid-template-columns: 1fr; }
     .hero-text-left, .hero-text-right { display: none; }
     .hero-image { width: 90%; }
-    .polaroid-wrapper { width: 150px; right: 0; }
+    .polaroid-wrapper { width: 100px; right: -5px; top: -15px; }
 }
 
 @media (max-width: 600px) {
