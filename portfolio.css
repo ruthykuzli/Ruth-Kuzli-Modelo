@@ -553,6 +553,10 @@ body {
 /* Editorial Gallery Section - Masonry & Lightbox */
 .editorial-gallery-section {
     background-color: var(--bg-color);
+    background-image: url('assets/FONDOS/papel rojo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: 40px 4% 100px;
 }
 
@@ -858,22 +862,22 @@ body {
 
 /* Responsive Masonry Rules */
 @media (max-width: 1024px) {
-    .masonry-portfolio-grid { columns: 3; }
+    .masonry-portfolio-grid { columns: 4; }
 }
 
 @media (max-width: 768px) {
-    .masonry-portfolio-grid { columns: 2; column-gap: 10px; }
-    .masonry-item { margin-bottom: 10px; }
-    .portfolio-filters { gap: 12px; }
-    .filter-btn { font-size: 0.8rem; padding: 6px 10px; letter-spacing: 2px; }
+    .masonry-portfolio-grid { columns: 3; column-gap: 6px; }
+    .masonry-item { margin-bottom: 6px; }
+    .portfolio-filters { gap: 8px; }
+    .filter-btn { font-size: 0.75rem; padding: 5px 8px; letter-spacing: 1.5px; }
     .lightbox-nav { display: none; } /* Use swipe/touch on mobile */
     .lightbox-title { font-size: 1.6rem; }
     .lightbox-credit { font-size: 0.7rem; }
 }
 
 @media (max-width: 480px) {
-    .masonry-portfolio-grid { columns: 2; column-gap: 8px; }
-    .masonry-item { margin-bottom: 8px; }
+    .masonry-portfolio-grid { columns: 3; column-gap: 4px; }
+    .masonry-item { margin-bottom: 4px; }
 }
 
 /* Back to tabs button inside galleries */
