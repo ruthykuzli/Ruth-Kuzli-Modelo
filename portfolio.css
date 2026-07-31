@@ -643,6 +643,7 @@ body {
 .masonry-portfolio-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    align-items: start;
     gap: 14px;
     width: 100%;
 }
@@ -654,13 +655,15 @@ body {
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    background-color: #e5dfd7;
+    background: transparent;
+    background-color: transparent;
 }
 
 .masonry-media {
     position: relative;
     width: 100%;
     overflow: hidden;
+    background: transparent;
 }
 
 .masonry-media img,
@@ -669,6 +672,7 @@ body {
     height: auto;
     display: block;
     object-fit: cover;
+    border-radius: 4px;
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.4s ease;
 }
 
@@ -865,11 +869,11 @@ body {
 
 /* Responsive Masonry Rules (Horizontal Grid Left-to-Right) */
 @media (max-width: 1024px) {
-    .masonry-portfolio-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .masonry-portfolio-grid { grid-template-columns: repeat(4, 1fr); align-items: start; gap: 10px; }
 }
 
 @media (max-width: 768px) {
-    .masonry-portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .masonry-portfolio-grid { grid-template-columns: repeat(3, 1fr); align-items: start; gap: 6px; }
     .portfolio-filters { gap: 8px; }
     .filter-btn { font-size: 0.75rem; padding: 5px 8px; letter-spacing: 1.5px; }
     .lightbox-nav { display: none; } /* Use swipe/touch on mobile */
@@ -878,7 +882,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .masonry-portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 4px; }
+    .masonry-portfolio-grid { grid-template-columns: repeat(3, 1fr); align-items: start; gap: 4px; }
 }
 
 /* Back to tabs button inside galleries */
