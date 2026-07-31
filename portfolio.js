@@ -5,38 +5,42 @@ document.addEventListener("DOMContentLoaded", function() {
     const masonryItems = document.querySelectorAll('.masonry-item');
     const runwayBrandsBar = document.getElementById('runway-brands-bar');
 
+    // Función para aplicar filtro
+    function applyFilter(filterValue) {
+        // Mostrar/ocultar barra de marcas si es Runway
+        if (runwayBrandsBar) {
+            runwayBrandsBar.style.display = (filterValue === 'runway') ? 'block' : 'none';
+        }
+
+        // Filtrar elementos
+        masonryItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+            if (category === filterValue) {
+                item.style.display = 'inline-block';
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, 50);
+            } else {
+                item.classList.remove('visible');
+                item.style.display = 'none';
+            }
+        });
+    }
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Manejar clase activa en botones
             filterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-
             const filterValue = this.getAttribute('data-filter');
-
-            // Mostrar/ocultar barra de marcas si es Runway o Todos
-            if (runwayBrandsBar) {
-                if (filterValue === 'runway' || filterValue === 'all') {
-                    runwayBrandsBar.style.display = 'block';
-                } else {
-                    runwayBrandsBar.style.display = 'none';
-                }
-            }
-
-            // Filtrar elementos con animación suave
-            masonryItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-                if (filterValue === 'all' || category === filterValue) {
-                    item.style.display = 'inline-block';
-                    setTimeout(() => {
-                        item.classList.add('visible');
-                    }, 50);
-                } else {
-                    item.classList.remove('visible');
-                    item.style.display = 'none';
-                }
-            });
+            applyFilter(filterValue);
         });
     });
+
+    // Inicializar con el filtro activo por defecto (RUNWAY)
+    const initialActive = document.querySelector('.filter-btn.active');
+    if (initialActive) {
+        applyFilter(initialActive.getAttribute('data-filter'));
+    }
 
     // --- 2. FADE-IN SCROLL ANIMATION (OBSERVER) ---
     const observerOptions = {
