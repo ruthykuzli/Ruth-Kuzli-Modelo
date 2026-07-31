@@ -135,172 +135,572 @@
         <div class="red-horizontal-line"></div>
     </section>
 
-    <!-- Portfolio Editorial Tabs Section -->
+    <!-- Portfolio Editorial Section -->
     <section class="editorial-gallery-section" id="portafolio">
         <div class="editorial-tabs-container">
-            <div class="editorial-tabs">
-                <button class="editorial-tab active" onclick="openTab(event, 'runway')">RUNWAY</button>
-                <button class="editorial-tab" onclick="openTab(event, 'shooting')">SHOOTING</button>
-                <button class="editorial-tab" onclick="openTab(event, 'galeria')">REELS/UGC</button>
-            </div>
             
-            <div class="editorial-content-area">
+            <!-- Category Filter Buttons -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">TODOS</button>
+                <button class="filter-btn" data-filter="runway">RUNWAY</button>
+                <button class="filter-btn" data-filter="shooting">SHOOTING</button>
+                <button class="filter-btn" data-filter="reels">REELS / UGC</button>
+            </div>
+
+            <!-- Runway Brand List -->
+            <div class="runway-brands-bar" id="runway-brands-bar">
+                <span class="brands-bar-title">MARCAS DE PASARELA:</span>
+                <span class="brands-list-inline">Gerardo Casas • Pompona by Pablo Simón • Valeria Simón • Canelita tea events • Musas Vestidos • Graciela Misasi • Ivory Hats • Guillermina Vestidos • P0seso • Gotas de Rocío • Roxana Jimenez • Anama Models School</span>
+            </div>
+
+            <!-- High Fashion Masonry Grid -->
+            <div class="masonry-portfolio-grid" id="portfolio-grid">
                 
-                <!-- Runway Tab -->
-                <div id="runway" class="tab-content active-content">
-                    <div class="runway-container">
-                        <div class="runway-sidebar">
-                            <h3 class="runway-sidebar-title">MARCAS DE PASARELA</h3>
-                            <ul class="runway-brands">
-                                <li>Gerardo Casas</li>
-                                <li>Pompona by Pablo Simón</li>
-                                <li>Valeria Simón</li>
-                                <li>Canelita tea events</li>
-                                <li>Musas Vestidos</li>
-                                <li>Graciela Misasi</li>
-                                <li>Ivory Hats</li>
-                                <li>Guillermina Vestidos</li>
-                                <li>P0seso</li>
-                                <li>Gotas de Rocío</li>
-                                <li>Roxana Jimenez</li>
-                                <li>Anama Models School</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="runway-gallery">
-                            <!-- Videos and Photos Mixed -->
-                            <div class="runway-item span-row-2">
-                                <video playsinline loop muted autoplay><source src="assets/RUNWAY/WhatsApp_Video_2026-05-01_at_17.08.54.mp4"></video>
-                            </div>
-                            <div class="runway-item span-col-2"><img src="assets/RUNWAY/5098190278903925820.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item"><img src="assets/RUNWAY/5098190278903925709.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item span-col-2"><img src="assets/RUNWAY/ivory hats 1.jpg" loading="lazy" alt="Runway"></div>
-
-                            <div class="runway-item"><img src="assets/RUNWAY/IMG_1995.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item span-row-2">
-                                <video playsinline loop muted autoplay><source src="assets/RUNWAY/IMG_4131.MOV"></video>
-                            </div>
-                            <div class="runway-item"><img src="assets/RUNWAY/5098190278903925712.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item span-col-2"><img src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 15.06.52.jpeg" loading="lazy" alt="Runway"></div>
-
-                            <div class="runway-item"><img src="assets/RUNWAY/5098190278903925713.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item"><img src="assets/RUNWAY/ivory hats 2.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item span-row-2">
-                                <video playsinline loop muted autoplay><source src="assets/RUNWAY/IMG_5109.MOV"></video>
-                            </div>
-
-                            <div class="runway-item"><img src="assets/RUNWAY/IMG_1996.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item"><img src="assets/RUNWAY/WhatsApp Image 2026-05-01 at 16.38.28.jpeg" loading="lazy" alt="Runway"></div>
-                            
-                            <div class="runway-item span-row-2">
-                                <video playsinline loop muted autoplay><source src="assets/RUNWAY/WhatsApp_Video_2026-03-28_at_14.52.43.mp4"></video>
-                            </div>
-                            <div class="runway-item span-col-2"><img src="assets/RUNWAY/5098190278903925714.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item"><img src="assets/RUNWAY/5098190278903925715.jpg" loading="lazy" alt="Runway"></div>
-
-                            <div class="runway-item span-row-2">
-                                <video playsinline loop muted autoplay><source src="assets/RUNWAY/IMG_9202.MOV"></video>
-                            </div>
-                            <div class="runway-item"><img src="assets/RUNWAY/5098190278903925773.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item"><img src="assets/RUNWAY/5098190278903925813.jpg" loading="lazy" alt="Runway"></div>
-
-                            <div class="runway-item"><img src="assets/RUNWAY/IMG_1998.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item span-col-2"><img src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 14.52.39.jpeg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item span-row-2">
-                                <video playsinline loop muted autoplay><source src="assets/RUNWAY/IMG_8479.MP4"></video>
-                            </div>
-
-                            <div class="runway-item"><img src="assets/RUNWAY/5098190278903925815.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item"><img src="assets/RUNWAY/ivory hats 3.jpg" loading="lazy" alt="Runway"></div>
-                            
-                            <div class="runway-item"><img src="assets/RUNWAY/5098190278903925816.jpg" loading="lazy" alt="Runway"></div>
-                            <div class="runway-item"><img src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 15.06.36.jpeg" loading="lazy" alt="Runway"></div>
-
-                            <div class="runway-item span-row-2">
-                                <video playsinline loop muted autoplay><source src="assets/RUNWAY/IMG_4183.MP4"></video>
-                            </div>
-                            <div class="runway-item"><img src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 15.06.52 (1).jpeg" loading="lazy" alt="Runway"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="back-tabs-container dual-buttons" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                        <a href="#portafolio" class="back-to-tabs-btn" onclick="document.querySelector('.editorial-tab[onclick*=\'shooting\']').click();" style="background-color: var(--primary-color); color: #fff;">SIGUIENTE: SHOOTING</a>
-                        <a href="#portafolio" class="back-to-tabs-btn">VOLVER A MIS TRABAJOS</a>
+                <!-- RUNWAY ITEMS -->
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="video" data-src="assets/RUNWAY/WhatsApp_Video_2026-05-01_at_17.08.54.mp4" data-title="Pasarela Editorial" data-credit="Ruth Kuzli • Runway Collection">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/RUNWAY/WhatsApp_Video_2026-05-01_at_17.08.54.mp4"></video>
+                        <div class="item-overlay"><span class="view-tag">VER EN ALTA RESOLUCIÓN</span></div>
                     </div>
                 </div>
 
-                <!-- Shooting Tab -->
-                <div id="shooting" class="tab-content">
-                    <div class="shooting-gallery">
-                        <div class="shooting-item"><img src="assets/_DSC1241.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/IMG_1820.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/_DSC1375.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/5098190278903925726.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/WhatsApp Image 2026-05-01 at 16.17.17 - copia.jpeg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/_DSC1316.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/_HOF0072.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/5098190278903925768.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/WhatsApp Image 2026-05-01 at 16.17.14.jpeg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/5098190278903925734.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/_DSC1247.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/IMG_1809.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/WhatsApp Image 2026-05-01 at 16.17.17 (1).jpeg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/5098190278903925772.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/_DSC1251.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/5098190278903925729.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/_HOF0082.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/5098190278903925741.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/WhatsApp Image 2026-05-01 at 16.17.17 (2) - copia.jpeg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/IMG_1826.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/_DSC1257.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/5098190278903925753.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/21FF8C8B-0C5D-4B4B-A63F-B6DB1ACE6CDC_L0_001-18_2_2026, 12_08_01 a.m..jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/5098190278903925740.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/_DSC1300.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/WhatsApp Image 2026-03-28 at 15.55.11.jpeg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/5098190278903925724.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/_DSC1299.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/WhatsApp Image 2026-05-01 at 16.17.17 (3).jpeg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/5098190278903925766.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/IMG_1811.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/5098190278903925732.jpg" loading="lazy" alt="Shooting"></div>
-                        <div class="shooting-item"><img src="assets/_DSC1377.jpg" loading="lazy" alt="Shooting"></div>
-                    </div>
-                    
-                    <div class="back-tabs-container">
-                        <a href="#portafolio" class="back-to-tabs-btn" style="background-color: #ffffff; color: var(--primary-color);">VOLVER A MIS TRABAJOS</a>
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/5098190278903925820.jpg" data-title="High Fashion Runway" data-credit="Ruth Kuzli • Pasarela">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/5098190278903925820.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
                     </div>
                 </div>
 
-                <!-- Galeria Tab -->
-                <div id="galeria" class="tab-content">
-                    <div class="reels-container">
-                        <h3 class="reels-subtitle">Moda, Lifestyle & Beauty</h3>
-                        <div class="reels-gallery">
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-05-01_at_17.08.07.mp4"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/IMG_3721.MOV"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/IMG_6637.MOV"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/IMG_6796.MP4"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/IMG_6797.MP4"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.55.21.mp4"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.26.mp4"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.34.mp4"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.40.mp4"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.47.mp4"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.49.mp4"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-05-01_at_17.45.42.mp4"></video></div>
-                            <div class="reels-item"><video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-05-01_at_17.46.36.mp4"></video></div>
-                        </div>
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/5098190278903925709.jpg" data-title="Editorial Runway" data-credit="Ruth Kuzli • Pasarela">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/5098190278903925709.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
                     </div>
-                    
-                    <div class="back-tabs-container dual-buttons" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                        <a href="#portafolio" class="back-to-tabs-btn outline-btn">VOLVER A MIS TRABAJOS</a>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/ivory hats 1.jpg" data-title="Ivory Hats Collection" data-credit="Ruth Kuzli for Ivory Hats">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/ivory hats 1.jpg" loading="lazy" alt="Ivory Hats">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/IMG_1995.jpg" data-title="Pasarela Look 1" data-credit="Ruth Kuzli • Runway">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/IMG_1995.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="video" data-src="assets/RUNWAY/IMG_4131.MOV" data-title="Pasarela Video Reel" data-credit="Ruth Kuzli • Runway Backstage">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/RUNWAY/IMG_4131.MOV"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR VIDEO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/5098190278903925712.jpg" data-title="Gerardo Casas Runway" data-credit="Ruth Kuzli for Gerardo Casas">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/5098190278903925712.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 15.06.52.jpeg" data-title="Pasarela Editorial" data-credit="Ruth Kuzli • Runway">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 15.06.52.jpeg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/ivory hats 2.jpg" data-title="Ivory Hats Editorial" data-credit="Ruth Kuzli for Ivory Hats">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/ivory hats 2.jpg" loading="lazy" alt="Ivory Hats">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="video" data-src="assets/RUNWAY/IMG_5109.MOV" data-title="Pasarela Motion" data-credit="Ruth Kuzli • Runway">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/RUNWAY/IMG_5109.MOV"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR VIDEO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/5098190278903925713.jpg" data-title="P0seso Collection" data-credit="Ruth Kuzli for P0seso">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/5098190278903925713.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/IMG_1996.jpg" data-title="Pasarela High Couture" data-credit="Ruth Kuzli • Runway">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/IMG_1996.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/WhatsApp Image 2026-05-01 at 16.38.28.jpeg" data-title="Roxana Jimenez Collection" data-credit="Ruth Kuzli for Roxana Jimenez">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/WhatsApp Image 2026-05-01 at 16.38.28.jpeg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="video" data-src="assets/RUNWAY/WhatsApp_Video_2026-03-28_at_14.52.43.mp4" data-title="Pasarela Highlights" data-credit="Ruth Kuzli • Runway Show">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/RUNWAY/WhatsApp_Video_2026-03-28_at_14.52.43.mp4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR VIDEO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/5098190278903925714.jpg" data-title="Guillermina Vestidos" data-credit="Ruth Kuzli for Guillermina Vestidos">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/5098190278903925714.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/5098190278903925715.jpg" data-title="Gotas de Rocío" data-credit="Ruth Kuzli for Gotas de Rocío">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/5098190278903925715.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="video" data-src="assets/RUNWAY/IMG_9202.MOV" data-title="Pasarela Catwalk" data-credit="Ruth Kuzli • Runway Live">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/RUNWAY/IMG_9202.MOV"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR VIDEO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/5098190278903925773.jpg" data-title="Valeria Simón Pasarela" data-credit="Ruth Kuzli for Valeria Simón">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/5098190278903925773.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/5098190278903925813.jpg" data-title="Pompona by Pablo Simón" data-credit="Ruth Kuzli for Pompona">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/5098190278903925813.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/IMG_1998.jpg" data-title="Editorial Runway" data-credit="Ruth Kuzli • Runway">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/IMG_1998.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 14.52.39.jpeg" data-title="Musas Vestidos" data-credit="Ruth Kuzli for Musas Vestidos">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 14.52.39.jpeg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="video" data-src="assets/RUNWAY/IMG_8479.MP4" data-title="Pasarela Finale" data-credit="Ruth Kuzli • Runway Show">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/RUNWAY/IMG_8479.MP4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR VIDEO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/5098190278903925815.jpg" data-title="Canelita Tea Events" data-credit="Ruth Kuzli for Canelita">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/5098190278903925815.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/ivory hats 3.jpg" data-title="Ivory Hats High Couture" data-credit="Ruth Kuzli for Ivory Hats">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/ivory hats 3.jpg" loading="lazy" alt="Ivory Hats">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/5098190278903925816.jpg" data-title="Graciela Misasi Collection" data-credit="Ruth Kuzli for Graciela Misasi">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/5098190278903925816.jpg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 15.06.36.jpeg" data-title="Anama Models School" data-credit="Ruth Kuzli • Anama Models">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 15.06.36.jpeg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="video" data-src="assets/RUNWAY/IMG_4183.MP4" data-title="Pasarela Special" data-credit="Ruth Kuzli • Runway">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/RUNWAY/IMG_4183.MP4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR VIDEO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="runway" data-type="image" data-src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 15.06.52 (1).jpeg" data-title="Pasarela Finale Look" data-credit="Ruth Kuzli • Runway">
+                    <div class="masonry-media">
+                        <img src="assets/RUNWAY/WhatsApp Image 2026-03-28 at 15.06.52 (1).jpeg" loading="lazy" alt="Runway">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+
+                <!-- SHOOTING ITEMS -->
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/_DSC1241.jpg" data-title="Editorial Portrait" data-credit="Ruth Kuzli • High Fashion Shooting">
+                    <div class="masonry-media">
+                        <img src="assets/_DSC1241.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/IMG_1820.jpg" data-title="Ruth Kuzli Hero Shoot" data-credit="Ruth Kuzli • Commercial & Editorial">
+                    <div class="masonry-media">
+                        <img src="assets/IMG_1820.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/_DSC1375.jpg" data-title="Studio Fashion Shoot" data-credit="Ruth Kuzli • Editorial 2026">
+                    <div class="masonry-media">
+                        <img src="assets/_DSC1375.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/5098190278903925726.jpg" data-title="Black & White Editorial" data-credit="Ruth Kuzli • Studio Series">
+                    <div class="masonry-media">
+                        <img src="assets/5098190278903925726.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/WhatsApp Image 2026-05-01 at 16.17.17 - copia.jpeg" data-title="Beauty & Fashion" data-credit="Ruth Kuzli • Production">
+                    <div class="masonry-media">
+                        <img src="assets/WhatsApp Image 2026-05-01 at 16.17.17 - copia.jpeg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/_DSC1316.jpg" data-title="Editorial Light" data-credit="Ruth Kuzli • Studio Series">
+                    <div class="masonry-media">
+                        <img src="assets/_DSC1316.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/_HOF0072.jpg" data-title="House of Fashion" data-credit="Ruth Kuzli • HOF Production">
+                    <div class="masonry-media">
+                        <img src="assets/_HOF0072.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/5098190278903925768.jpg" data-title="High Fashion Concept" data-credit="Ruth Kuzli • Editorial">
+                    <div class="masonry-media">
+                        <img src="assets/5098190278903925768.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/WhatsApp Image 2026-05-01 at 16.17.14.jpeg" data-title="Commercial Shoot" data-credit="Ruth Kuzli • Commercial">
+                    <div class="masonry-media">
+                        <img src="assets/WhatsApp Image 2026-05-01 at 16.17.14.jpeg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/5098190278903925734.jpg" data-title="Minimalist Studio" data-credit="Ruth Kuzli • Minimalist Series">
+                    <div class="masonry-media">
+                        <img src="assets/5098190278903925734.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/_DSC1247.jpg" data-title="Couture Portrait" data-credit="Ruth Kuzli • High Fashion">
+                    <div class="masonry-media">
+                        <img src="assets/_DSC1247.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/IMG_1809.jpg" data-title="Editorial Glam" data-credit="Ruth Kuzli • Beauty">
+                    <div class="masonry-media">
+                        <img src="assets/IMG_1809.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/WhatsApp Image 2026-05-01 at 16.17.17 (1).jpeg" data-title="Vogue Style Shoot" data-credit="Ruth Kuzli • Editorial">
+                    <div class="masonry-media">
+                        <img src="assets/WhatsApp Image 2026-05-01 at 16.17.17 (1).jpeg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/5098190278903925772.jpg" data-title="Urban High Fashion" data-credit="Ruth Kuzli • Lookbook">
+                    <div class="masonry-media">
+                        <img src="assets/5098190278903925772.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/_DSC1251.jpg" data-title="Polaroid & Natural" data-credit="Ruth Kuzli • Natural Beauty">
+                    <div class="masonry-media">
+                        <img src="assets/_DSC1251.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/5098190278903925729.jpg" data-title="Editorial Expressions" data-credit="Ruth Kuzli • Art & Fashion">
+                    <div class="masonry-media">
+                        <img src="assets/5098190278903925729.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/_HOF0082.jpg" data-title="House of Fashion Series" data-credit="Ruth Kuzli • HOF">
+                    <div class="masonry-media">
+                        <img src="assets/_HOF0082.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/5098190278903925741.jpg" data-title="High Contrast Fashion" data-credit="Ruth Kuzli • Editorial">
+                    <div class="masonry-media">
+                        <img src="assets/5098190278903925741.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/WhatsApp Image 2026-05-01 at 16.17.17 (2) - copia.jpeg" data-title="Close Up Portrait" data-credit="Ruth Kuzli • Beauty">
+                    <div class="masonry-media">
+                        <img src="assets/WhatsApp Image 2026-05-01 at 16.17.17 (2) - copia.jpeg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/IMG_1826.jpg" data-title="Fashion Lookbook" data-credit="Ruth Kuzli • Lookbook">
+                    <div class="masonry-media">
+                        <img src="assets/IMG_1826.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/_DSC1257.jpg" data-title="Atmosphere Fashion" data-credit="Ruth Kuzli • Editorial">
+                    <div class="masonry-media">
+                        <img src="assets/_DSC1257.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/5098190278903925753.jpg" data-title="Studio Posing" data-credit="Ruth Kuzli • Model Portfolio">
+                    <div class="masonry-media">
+                        <img src="assets/5098190278903925753.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/21FF8C8B-0C5D-4B4B-A63F-B6DB1ACE6CDC_L0_001-18_2_2026, 12_08_01 a.m..jpg" data-title="Fine Art Shoot" data-credit="Ruth Kuzli • Art">
+                    <div class="masonry-media">
+                        <img src="assets/21FF8C8B-0C5D-4B4B-A63F-B6DB1ACE6CDC_L0_001-18_2_2026, 12_08_01 a.m..jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/5098190278903925740.jpg" data-title="Body & Proportions" data-credit="Ruth Kuzli • Measurements Shoot">
+                    <div class="masonry-media">
+                        <img src="assets/5098190278903925740.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/_DSC1300.jpg" data-title="Classic Editorial" data-credit="Ruth Kuzli • Fashion">
+                    <div class="masonry-media">
+                        <img src="assets/_DSC1300.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/WhatsApp Image 2026-03-28 at 15.55.11.jpeg" data-title="Lifestyle Portrait" data-credit="Ruth Kuzli • Lifestyle">
+                    <div class="masonry-media">
+                        <img src="assets/WhatsApp Image 2026-03-28 at 15.55.11.jpeg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/5098190278903925724.jpg" data-title="Fashion Expression" data-credit="Ruth Kuzli • Studio">
+                    <div class="masonry-media">
+                        <img src="assets/5098190278903925724.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/_DSC1299.jpg" data-title="Moodbook Shoot" data-credit="Ruth Kuzli • Editorial">
+                    <div class="masonry-media">
+                        <img src="assets/_DSC1299.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/WhatsApp Image 2026-05-01 at 16.17.17 (3).jpeg" data-title="Vogue Beauty" data-credit="Ruth Kuzli • Beauty">
+                    <div class="masonry-media">
+                        <img src="assets/WhatsApp Image 2026-05-01 at 16.17.17 (3).jpeg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/5098190278903925766.jpg" data-title="Shadows & Contrast" data-credit="Ruth Kuzli • Art Series">
+                    <div class="masonry-media">
+                        <img src="assets/5098190278903925766.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/IMG_1811.jpg" data-title="Natural Light" data-credit="Ruth Kuzli • Outdoor Shoot">
+                    <div class="masonry-media">
+                        <img src="assets/IMG_1811.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/5098190278903925732.jpg" data-title="Modern Lines" data-credit="Ruth Kuzli • Lookbook">
+                    <div class="masonry-media">
+                        <img src="assets/5098190278903925732.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="shooting" data-type="image" data-src="assets/_DSC1377.jpg" data-title="Couture Finale" data-credit="Ruth Kuzli • High Fashion">
+                    <div class="masonry-media">
+                        <img src="assets/_DSC1377.jpg" loading="lazy" alt="Shooting">
+                        <div class="item-overlay"><span class="view-tag">VER FOTO</span></div>
+                    </div>
+                </div>
+
+
+                <!-- REELS / UGC ITEMS -->
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/WhatsApp_Video_2026-05-01_at_17.08.07.mp4" data-title="Moda & Lifestyle Reel 1" data-credit="Ruth Kuzli • UGC Video Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-05-01_at_17.08.07.mp4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/IMG_3721.MOV" data-title="Beauty & Fashion Reel 2" data-credit="Ruth Kuzli • UGC Video Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/IMG_3721.MOV"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/IMG_6637.MOV" data-title="Editorial Commercial Reel 3" data-credit="Ruth Kuzli • UGC Video Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/IMG_6637.MOV"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/IMG_6796.MP4" data-title="Lifestyle & Motion Reel 4" data-credit="Ruth Kuzli • UGC Video Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/IMG_6796.MP4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/IMG_6797.MP4" data-title="High Fashion Reel 5" data-credit="Ruth Kuzli • UGC Video Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/IMG_6797.MP4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.55.21.mp4" data-title="Commercial Reel 6" data-credit="Ruth Kuzli • UGC Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.55.21.mp4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.26.mp4" data-title="Beauty Reel 7" data-credit="Ruth Kuzli • UGC Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.26.mp4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.34.mp4" data-title="Behind The Scenes Reel 8" data-credit="Ruth Kuzli • UGC Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.34.mp4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.40.mp4" data-title="Lifestyle Reel 9" data-credit="Ruth Kuzli • UGC Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.40.mp4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.47.mp4" data-title="Outfit & Look Reel 10" data-credit="Ruth Kuzli • UGC Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.47.mp4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.49.mp4" data-title="Commercial Reel 11" data-credit="Ruth Kuzli • UGC Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-03-28_at_15.56.49.mp4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/WhatsApp_Video_2026-05-01_at_17.45.42.mp4" data-title="Fashion Reel 12" data-credit="Ruth Kuzli • UGC Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-05-01_at_17.45.42.mp4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
+                    </div>
+                </div>
+
+                <div class="masonry-item fade-in-item" data-category="reels" data-type="video" data-src="assets/VIDEOS/WhatsApp_Video_2026-05-01_at_17.46.36.mp4" data-title="Beauty & Glow Reel 13" data-credit="Ruth Kuzli • UGC Content">
+                    <div class="masonry-media">
+                        <video playsinline loop muted autoplay><source src="assets/VIDEOS/WhatsApp_Video_2026-05-01_at_17.46.36.mp4"></video>
+                        <div class="item-overlay"><span class="view-tag">REPRODUCIR CON AUDIO</span></div>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+
+    <!-- High Fashion Lightbox / Visor Modal -->
+    <div id="portfolio-lightbox" class="lightbox-modal" aria-hidden="true">
+        <div class="lightbox-backdrop"></div>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar visor">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Anterior">&#10094;</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Siguiente">&#10095;</button>
+        
+        <div class="lightbox-content-box">
+            <div class="lightbox-media-wrapper" id="lightbox-media">
+                <!-- Dynamically injected -->
+            </div>
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightbox-title">Título Producción</h3>
+                <p class="lightbox-credit" id="lightbox-credit">Ruth Kuzli • Editorial</p>
+                <div class="lightbox-brand-tag">RUTH KUZLI PORTFOLIO</div>
+            </div>
+        </div>
+    </div>
 
     <!-- Script para Tabs -->
     <script src="portfolio.js"></script> 

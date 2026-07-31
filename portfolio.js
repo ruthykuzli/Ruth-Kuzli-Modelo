@@ -1,54 +1,160 @@
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-
-    // Hide all tab-content
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-        tabcontent[i].classList.remove("active-content");
-    }
-
-    // Remove active class from all tabs
-    tablinks = document.getElementsByClassName("editorial-tab");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-    }
-
-    // Show the current tab, and add an "active" class to the button
-    var currentTab = document.getElementById(tabName);
-    currentTab.style.display = "block";
-    currentTab.classList.add("active-content");
-    evt.currentTarget.classList.add("active");
-
-    // Scroll automatically to the folder content area so the user sees the new tab content immediately
-    const folderSection = document.getElementById("portafolio");
-    if (folderSection) {
-        folderSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-}
-
-// Lógica interactiva para activar sonido en los videos sin controles nativos
 document.addEventListener("DOMContentLoaded", function() {
-    const videos = document.querySelectorAll('video');
-    
-    videos.forEach(video => {
-        // Asegurar que no tengan controles nativos para que el click funcione en toda la superficie
-        video.removeAttribute('controls');
-        
-        video.addEventListener('click', function() {
-            if (video.muted) {
-                // Silenciar todos los demás videos para que no se mezclen los audios
-                videos.forEach(v => {
-                    v.muted = true;
-                });
-                
-                // Des-silenciar el video clickeado y reiniciar para escuchar desde el principio
-                video.muted = false;
-                video.currentTime = 0;
-            } else {
-                // Si ya tenía sonido, lo volvemos a silenciar
-                video.muted = true;
+
+    // --- 1. FILTROS DE CATEGORÍA SOBERBIOS & FLUIDOS ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const masonryItems = document.querySelectorAll('.masonry-item');
+    const runwayBrandsBar = document.getElementById('runway-brands-bar');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Manejar clase activa en botones
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+
+            // Mostrar/ocultar barra de marcas si es Runway o Todos
+            if (runwayBrandsBar) {
+                if (filterValue === 'runway' || filterValue === 'all') {
+                    runwayBrandsBar.style.display = 'block';
+                } else {
+                    runwayBrandsBar.style.display = 'none';
+                }
+            }
+
+            // Filtrar elementos con animación suave
+            masonryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filterValue === 'all' || category === filterValue) {
+                    item.style.display = 'inline-block';
+                    setTimeout(() => {
+                        item.classList.add('visible');
+                    }, 50);
+                } else {
+                    item.classList.remove('visible');
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // --- 2. FADE-IN SCROLL ANIMATION (OBSERVER) ---
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const fadeInObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
+    }, observerOptions);
+
+    masonryItems.forEach(item => {
+        fadeInObserver.observe(item);
+    });
+
+
+    // --- 3. VISOR LIGHTBOX HIGH FASHION & SONIDO ---
+    const lightbox = document.getElementById('portfolio-lightbox');
+    const lightboxMedia = document.getElementById('lightbox-media');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxCredit = document.getElementById('lightbox-credit');
+    const closeBtn = document.getElementById('lightbox-close');
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
+    const backdrop = document.querySelector('.lightbox-backdrop');
+
+    let visibleItemsList = [];
+    let currentIndex = -1;
+
+    function getVisibleItems() {
+        return Array.from(masonryItems).filter(item => item.style.display !== 'none');
+    }
+
+    function openLightbox(item) {
+        visibleItemsList = getVisibleItems();
+        currentIndex = visibleItemsList.indexOf(item);
+
+        if (currentIndex === -1) return;
+
+        updateLightboxContent(item);
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightboxMedia.innerHTML = '';
+        document.body.style.overflow = '';
+    }
+
+    function updateLightboxContent(item) {
+        const type = item.getAttribute('data-type');
+        const src = item.getAttribute('data-src');
+        const title = item.getAttribute('data-title') || 'Ruth Kuzli Portfolio';
+        const credit = item.getAttribute('data-credit') || 'Editorial High Fashion';
+
+        lightboxTitle.textContent = title;
+        lightboxCredit.textContent = credit;
+
+        lightboxMedia.innerHTML = '';
+
+        if (type === 'video') {
+            const video = document.createElement('video');
+            video.src = src;
+            video.controls = true;
+            video.autoplay = true;
+            video.playsInline = true;
+            video.style.maxWidth = '100%';
+            video.style.maxHeight = '75vh';
+            lightboxMedia.appendChild(video);
+        } else {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = title;
+            img.style.maxWidth = '100%';
+            img.style.maxHeight = '75vh';
+            lightboxMedia.appendChild(img);
+        }
+    }
+
+    function showNext() {
+        visibleItemsList = getVisibleItems();
+        if (visibleItemsList.length === 0) return;
+        currentIndex = (currentIndex + 1) % visibleItemsList.length;
+        updateLightboxContent(visibleItemsList[currentIndex]);
+    }
+
+    function showPrev() {
+        visibleItemsList = getVisibleItems();
+        if (visibleItemsList.length === 0) return;
+        currentIndex = (currentIndex - 1 + visibleItemsList.length) % visibleItemsList.length;
+        updateLightboxContent(visibleItemsList[currentIndex]);
+    }
+
+    // Clic en items de la grilla para abrir Lightbox
+    masonryItems.forEach(item => {
+        item.addEventListener('click', () => openLightbox(item));
+    });
+
+    // Eventos de cierre y navegación
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (backdrop) backdrop.addEventListener('click', closeLightbox);
+    if (nextBtn) nextBtn.addEventListener('click', showNext);
+    if (prevBtn) prevBtn.addEventListener('click', showPrev);
+
+    // Navegación con teclado
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
     });
 });
