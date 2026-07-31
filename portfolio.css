@@ -183,6 +183,31 @@ body {
 .about-section {
     background-color: #fdfbf7;
     padding: 100px 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-sticker {
+    position: absolute;
+    z-index: 8;
+    width: 85px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.sticker-left {
+    top: 35px;
+    left: 3%;
+    transform: rotate(-12deg);
+}
+
+.sticker-right {
+    bottom: 30px;
+    right: 3%;
+    transform: rotate(10deg);
 }
 
 .about-container {
