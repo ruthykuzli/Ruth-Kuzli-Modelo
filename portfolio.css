@@ -639,24 +639,45 @@ body {
     margin-right: 8px;
 }
 
-/* Masonry Grid Layout (Horizontal Reading Left-to-Right) */
+/* Editorial Organic Collage Layout */
 .masonry-portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: start;
-    gap: 14px;
+    columns: 4;
+    column-gap: 12px;
     width: 100%;
 }
 
 .masonry-item {
+    break-inside: avoid;
+    display: inline-block;
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 12px;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
     background: transparent;
     background-color: transparent;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, z-index 0.3s ease;
+}
+
+/* Organic Collage Tilts */
+.masonry-item:nth-child(3n+1) {
+    transform: rotate(-1.4deg);
+}
+
+.masonry-item:nth-child(3n+2) {
+    transform: rotate(1.5deg);
+}
+
+.masonry-item:nth-child(4n+3) {
+    transform: rotate(-0.9deg);
+}
+
+.masonry-item:hover {
+    transform: rotate(0deg) scale(1.05) !important;
+    z-index: 25;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
 }
 
 .masonry-media {
@@ -673,13 +694,12 @@ body {
     display: block;
     object-fit: cover;
     border-radius: 4px;
-    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.4s ease;
+    transition: filter 0.4s ease;
 }
 
 .masonry-item:hover .masonry-media img,
 .masonry-item:hover .masonry-media video {
-    transform: scale(1.03);
-    filter: brightness(1.05);
+    filter: brightness(1.06);
 }
 
 /* Item Overlay on Hover */
@@ -867,13 +887,14 @@ body {
     color: var(--primary-light);
 }
 
-/* Responsive Masonry Rules (Horizontal Grid Left-to-Right) */
+/* Responsive Masonry Collage Rules */
 @media (max-width: 1024px) {
-    .masonry-portfolio-grid { grid-template-columns: repeat(4, 1fr); align-items: start; gap: 10px; }
+    .masonry-portfolio-grid { columns: 4; column-gap: 10px; }
 }
 
 @media (max-width: 768px) {
-    .masonry-portfolio-grid { grid-template-columns: repeat(3, 1fr); align-items: start; gap: 6px; }
+    .masonry-portfolio-grid { columns: 3; column-gap: 8px; }
+    .masonry-item { margin-bottom: 8px; }
     .portfolio-filters { gap: 8px; }
     .filter-btn { font-size: 0.75rem; padding: 5px 8px; letter-spacing: 1.5px; }
     .lightbox-nav { display: none; } /* Use swipe/touch on mobile */
@@ -882,7 +903,8 @@ body {
 }
 
 @media (max-width: 480px) {
-    .masonry-portfolio-grid { grid-template-columns: repeat(3, 1fr); align-items: start; gap: 4px; }
+    .masonry-portfolio-grid { columns: 3; column-gap: 6px; }
+    .masonry-item { margin-bottom: 6px; }
 }
 
 /* Back to tabs button inside galleries */
