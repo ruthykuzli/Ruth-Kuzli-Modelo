@@ -103,19 +103,19 @@ body {
 
 /* Hero Section */
 .hero-section {
-    padding: 40px 5% 80px;
+    padding: 30px 5% 60px;
     text-align: center;
     position: relative;
 }
 
 .hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(4rem, 10vw, 8rem);
+    font-size: clamp(3rem, 7vw, 5.5rem);
     color: var(--primary-color);
     font-weight: 400;
-    line-height: 0.9;
+    line-height: 0.95;
     letter-spacing: 2px;
-    margin-bottom: -40px; /* Overlap with image */
+    margin-bottom: -20px;
     position: relative;
     z-index: 2;
     text-transform: uppercase;
@@ -124,23 +124,24 @@ body {
 .hero-title em {
     font-family: 'Pinyon Script', cursive;
     text-transform: lowercase;
-    font-size: clamp(3rem, 7vw, 6rem);
+    font-size: clamp(2.2rem, 5.5vw, 4rem);
     letter-spacing: 0;
 }
 
 .hero-image-wrapper {
     position: relative;
-    max-width: 800px;
+    max-width: 650px;
     margin: 0 auto;
     z-index: 1;
 }
 
 .hero-image {
-    width: 65%;
+    width: 48%;
+    max-width: 380px;
     height: auto;
     border-radius: 4px;
     object-fit: cover;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
 .hero-text-left, .hero-text-right {
@@ -1437,7 +1438,7 @@ footer {
     .about-container { flex-direction: column; }
     .about-text-columns { grid-template-columns: 1fr; }
     .hero-text-left, .hero-text-right { display: none; }
-    .hero-image { width: 90%; }
+    .hero-image { width: 70%; max-width: 280px; }
     .polaroid-wrapper { width: 100px; right: -5px; top: -15px; }
 }
 
@@ -1451,8 +1452,8 @@ footer {
         justify-content: center; 
         gap: 20px;
     }
-    .hero-title { font-size: 2.5rem; }
-    .hero-title em { font-size: 2rem; }
+    .hero-title { font-size: 2.1rem; }
+    .hero-title em { font-size: 1.6rem; }
     .about-title { font-size: 2.2rem; }
     .footer-title { font-size: 2.5rem; }
 }
