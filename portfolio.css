@@ -291,6 +291,9 @@ body {
 .marquee-container {
     padding: 40px 0;
     background-color: var(--bg-color);
+    background-image: url('assets/FONDOS/IMG_4379.jpg');
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
     white-space: nowrap;
     border-bottom: 1px solid rgba(122,0,0,0.1);
@@ -536,12 +539,15 @@ body {
 
 .red-horizontal-line {
     width: 90%;
-    max-width: 750px;
-    height: 6px;
-    background: linear-gradient(90deg, transparent, var(--primary-color) 15%, var(--primary-color) 85%, transparent);
-    border-radius: 3px;
+    max-width: 800px;
+    height: 16px;
+    background-image: url('assets/FONDOS/papel rojo.png');
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;
     margin-top: 15px;
-    box-shadow: 0 2px 6px rgba(122,0,0,0.25);
+    box-shadow: 0 3px 8px rgba(122,0,0,0.3);
 }
 
 /* Editorial Gallery Section - Masonry & Lightbox */
