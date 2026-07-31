@@ -103,9 +103,13 @@ body {
 
 /* Hero Section */
 .hero-section {
-    padding: 30px 5% 60px;
+    padding: 40px 5% 60px;
     text-align: center;
     position: relative;
+    background-image: url('assets/FONDOS/descarga.png');
+    background-repeat: repeat-x;
+    background-position: center top;
+    background-size: cover;
 }
 
 .hero-title {
