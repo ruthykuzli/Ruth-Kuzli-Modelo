@@ -12,17 +12,17 @@ document.addEventListener("DOMContentLoaded", function() {
             runwayBrandsBar.style.display = (filterValue === 'runway') ? 'block' : 'none';
         }
 
-        // Filtrar elementos
+        // Filtrar elementos garantizando separación estricta de categorías
         masonryItems.forEach(item => {
             const category = item.getAttribute('data-category');
             if (category === filterValue) {
-                item.style.display = 'inline-block';
+                item.style.setProperty('display', 'inline-block', 'important');
                 setTimeout(() => {
                     item.classList.add('visible');
                 }, 50);
             } else {
                 item.classList.remove('visible');
-                item.style.display = 'none';
+                item.style.setProperty('display', 'none', 'important');
             }
         });
     }

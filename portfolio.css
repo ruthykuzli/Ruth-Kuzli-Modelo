@@ -887,74 +887,24 @@ body {
     color: var(--primary-light);
 }
 
-.swipe-hint-mobile {
-    display: none;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #ff8080;
-    margin-bottom: 16px;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-}
-
 /* Responsive Masonry Collage Rules */
 @media (max-width: 1024px) {
     .masonry-portfolio-grid { columns: 4; column-gap: 10px; }
 }
 
 @media (max-width: 768px) {
-    .swipe-hint-mobile {
-        display: block;
-    }
-
-    .editorial-gallery-section {
-        padding: 30px 2% 50px;
-    }
-
-    .masonry-portfolio-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        flex-wrap: wrap !important;
-        height: 580px !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        column-gap: 10px !important;
-        row-gap: 8px !important;
-        scroll-snap-type: x mandatory !important;
-        -webkit-overflow-scrolling: touch !important;
-        padding-bottom: 15px !important;
-    }
-
-    .masonry-item {
-        width: 140px !important;
-        height: calc(33.33% - 6px) !important;
-        flex-shrink: 0 !important;
-        scroll-snap-align: start !important;
-        margin-bottom: 0 !important;
-        break-inside: unset !important;
-        display: block !important;
-        transform: none !important;
-    }
-
-    .masonry-media {
-        height: 100% !important;
-        width: 100% !important;
-    }
-
-    .masonry-media img,
-    .masonry-media video {
-        height: 100% !important;
-        width: 100% !important;
-        object-fit: cover !important;
-    }
-
+    .masonry-portfolio-grid { columns: 3; column-gap: 8px; }
+    .masonry-item { margin-bottom: 8px; }
     .portfolio-filters { gap: 8px; }
     .filter-btn { font-size: 0.75rem; padding: 5px 8px; letter-spacing: 1.5px; }
     .lightbox-nav { display: none; }
     .lightbox-title { font-size: 1.6rem; }
     .lightbox-credit { font-size: 0.7rem; }
+}
+
+@media (max-width: 480px) {
+    .masonry-portfolio-grid { columns: 3; column-gap: 6px; }
+    .masonry-item { margin-bottom: 6px; }
 }
 
 /* Back to tabs button inside galleries */
