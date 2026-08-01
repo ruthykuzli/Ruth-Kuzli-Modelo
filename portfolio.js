@@ -5,24 +5,33 @@ document.addEventListener("DOMContentLoaded", function() {
     const masonryItems = document.querySelectorAll('.masonry-item');
     const runwayBrandsBar = document.getElementById('runway-brands-bar');
 
-    // Función para aplicar filtro
+    // Función para aplicar filtro optimizada para velocidad de carga
     function applyFilter(filterValue) {
         // Mostrar/ocultar barra de marcas si es Runway
         if (runwayBrandsBar) {
             runwayBrandsBar.style.display = (filterValue === 'runway') ? 'block' : 'none';
         }
 
-        // Filtrar elementos garantizando separación estricta de categorías
+        // Filtrar elementos garantizando separación estricta de categorías y ahorro de datos
         masonryItems.forEach(item => {
             const category = item.getAttribute('data-category');
+            const video = item.querySelector('video');
+
             if (category === filterValue) {
                 item.style.setProperty('display', 'inline-block', 'important');
                 setTimeout(() => {
                     item.classList.add('visible');
                 }, 50);
+                if (video) {
+                    video.preload = 'metadata';
+                }
             } else {
                 item.classList.remove('visible');
                 item.style.setProperty('display', 'none', 'important');
+                if (video) {
+                    video.pause();
+                    video.preload = 'none';
+                }
             }
         });
     }
@@ -58,7 +67,33 @@ document.addEventListener("DOMContentLoaded", function() {
         applyFilter(initialActive.getAttribute('data-filter'));
     }
 
-    // --- 2. FADE-IN SCROLL ANIMATION (OBSERVER) ---
+    // --- 2. OPTIMIZACIÓN DE VIDEOS: CARGA DIFERIDA (LAZY STREAMING) ---
+    const videoObserverOptions = {
+        root: null,
+        rootMargin: '100px',
+        threshold: 0.1
+    };
+
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target.querySelector('video');
+            if (!video) return;
+
+            if (entry.isIntersecting && entry.target.style.display !== 'none') {
+                video.preload = 'metadata';
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {});
+                }
+            } else {
+                if (!video.paused) {
+                    video.pause();
+                }
+            }
+        });
+    }, videoObserverOptions);
+
+    // --- 3. FADE-IN SCROLL ANIMATION (OBSERVER) ---
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -76,6 +111,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     masonryItems.forEach(item => {
         fadeInObserver.observe(item);
+        if (item.querySelector('video')) {
+            videoObserver.observe(item);
+        }
     });
 
 
