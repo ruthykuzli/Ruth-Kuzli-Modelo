@@ -950,6 +950,31 @@ body {
     margin-bottom: 15px;
 }
 
+/* Selector de Categorías Inferior */
+.bottom-category-selector {
+    margin-top: 60px;
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+}
+
+.bottom-selector-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #ff8080;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.bottom-filters {
+    justify-content: center;
+}
+
 .masonry-item img {
     width: 100%;
     height: auto;

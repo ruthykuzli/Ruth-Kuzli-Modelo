@@ -29,10 +29,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
             const filterValue = this.getAttribute('data-filter');
+            
+            // Sincronizar estado activo en todos los botones (superiores e inferiores)
+            filterBtns.forEach(b => {
+                if (b.getAttribute('data-filter') === filterValue) {
+                    b.classList.add('active');
+                } else {
+                    b.classList.remove('active');
+                }
+            });
+
             applyFilter(filterValue);
+
+            // Si se hace clic desde los botones inferiores, hacer scroll suave al inicio de la galería
+            if (this.closest('.bottom-category-selector')) {
+                const gallerySection = document.getElementById('trabajos') || document.querySelector('.editorial-gallery-section');
+                if (gallerySection) {
+                    gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
         });
     });
 
